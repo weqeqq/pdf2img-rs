@@ -8,14 +8,18 @@ cargo build --release
 The executable will be in `target/release/`.
 
 # Usage 
+Pdfium is required for the program to work.
+download it here: https://github.com/bblanchon/pdfium-binaries/releases
+afterwards just move pdfium.dll from bin/ to the directory where the pdf2img executable file is located.
+
 Exporting all pages from a single pdf.
 ```
-img2psd -i path/to/file.pdf -o path/to/output/dir
+pdf2img -i path/to/file.pdf -o path/to/output/dir
 ```
 
 Exporting all pages from a dirictory with pdf files.
 ```
-img2psd -i path/to/input/dir -o path/to/output/dir
+pdf2img -i path/to/input/dir -o path/to/output/dir
 ```
 
-Write `img2psd.exe --help` to get more information about using it.
+Write `pdf2img.exe --help` to get more information about using it.
