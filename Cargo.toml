@@ -1,0 +1,24 @@
+[package]
+name = "pdf2img"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1.8.1"
+image = "0.24.8"
+infer = "0.15.0"
+anyhow = "1.0.79"
+console = "0.15.8"
+pdfium-render = "0.8.17"
+clap = { version = "4.4.18", features = ["derive"] }
+indicatif = { version = "0.17.7", features = ["rayon"] }
+
+[profile.dev]
+opt-level = 2
+
+[profile.release]
+codegen-units = 1
+opt-level = 3
+strip = true
+lto = true
+
