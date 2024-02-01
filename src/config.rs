@@ -98,28 +98,28 @@ impl Target {
 #[derive(Args)]
 pub struct Progress {
 	#[arg(
-		long = "progress_bar_template",
+		long = "progress-bar-template",
 		value_name = "TEMPLATE",
 		default_value_t = String::from(DEFAULT_PROGRESS_TEMPLATE)
 	)]
 	template: String,
 
 	#[arg(
-		long = "nested_progress_bar_template",
+		long = "nested-progress-bar-template",
 		value_name = "TEMPLATE",
 		default_value_t = String::from(DEFAULT_NESTED_PROGRESS_TEMPLATE)
 	)]
 	nested_template: String,
 
 	#[arg(
-		long = "progress_bar_chars",
+		long = "progress-bar-chars",
 		value_name = "CHARS",
 		default_value_t = String::from(DEFAULT_PROGRESS_CHARS)
 	)]
 	chars: String,
 
 	#[arg(
-		long = "nested_progress_bar_chars",
+		long = "nested-progress-bar-chars",
 		value_name = "CHARS",
 		default_value_t = String::from(DEFAULT_NESTED_PROGRESS_CHARS)
 	)]
